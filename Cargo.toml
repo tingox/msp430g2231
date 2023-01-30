@@ -8,7 +8,7 @@ keywords = ["no-std", "msp430", "ti", "launchpad"]
 license = "MIT OR Apache-2.0"
 name = "msp430g2231"
 repository = "https://github.com/tkuenzel/msp430g2231"
-version = "0.1.0"
+version = "0.2.0"
 
 [dependencies]
 bare-metal = "0.2.0"
