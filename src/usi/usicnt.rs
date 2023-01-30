@@ -1,288 +1,185 @@
-#[doc = "Reader of register USICNT"]
-pub type R = crate::R<u8, super::USICNT>;
-#[doc = "Writer for register USICNT"]
-pub type W = crate::W<u8, super::USICNT>;
-#[doc = "Register USICNT `reset()`'s with value 0"]
-impl crate::ResetValue for super::USICNT {
-    type Type = u8;
+#[doc = "Register `USICNT` reader"]
+pub struct R(crate::R<USICNT_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<USICNT_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `USICNT0`"]
-pub type USICNT0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `USICNT0`"]
-pub struct USICNT0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USICNT0_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<USICNT_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u8) & 0x01);
-        self.w
+    fn from(reader: crate::R<USICNT_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `USICNT1`"]
-pub type USICNT1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `USICNT1`"]
-pub struct USICNT1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USICNT1_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `USICNT` writer"]
+pub struct W(crate::W<USICNT_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<USICNT_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u8) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `USICNT2`"]
-pub type USICNT2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `USICNT2`"]
-pub struct USICNT2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USICNT2_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u8) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `USICNT3`"]
-pub type USICNT3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `USICNT3`"]
-pub struct USICNT3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USICNT3_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<USICNT_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u8) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<USICNT_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `USICNT4`"]
-pub type USICNT4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `USICNT4`"]
-pub struct USICNT4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USICNT4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u8) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Reader of field `USIIFGCC`"]
-pub type USIIFGCC_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `USIIFGCC`"]
-pub struct USIIFGCC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USIIFGCC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u8) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Reader of field `USI16B`"]
-pub type USI16B_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `USI16B`"]
-pub struct USI16B_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USI16B_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u8) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `USISCLREL`"]
-pub type USISCLREL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `USISCLREL`"]
-pub struct USISCLREL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USISCLREL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u8) & 0x01) << 7);
-        self.w
-    }
-}
+#[doc = "Field `USICNT0` reader - USI Bit Count 0"]
+pub type USICNT0_R = crate::BitReader<bool>;
+#[doc = "Field `USICNT0` writer - USI Bit Count 0"]
+pub type USICNT0_W<'a, const O: u8> = crate::BitWriter<'a, u8, USICNT_SPEC, bool, O>;
+#[doc = "Field `USICNT1` reader - USI Bit Count 1"]
+pub type USICNT1_R = crate::BitReader<bool>;
+#[doc = "Field `USICNT1` writer - USI Bit Count 1"]
+pub type USICNT1_W<'a, const O: u8> = crate::BitWriter<'a, u8, USICNT_SPEC, bool, O>;
+#[doc = "Field `USICNT2` reader - USI Bit Count 2"]
+pub type USICNT2_R = crate::BitReader<bool>;
+#[doc = "Field `USICNT2` writer - USI Bit Count 2"]
+pub type USICNT2_W<'a, const O: u8> = crate::BitWriter<'a, u8, USICNT_SPEC, bool, O>;
+#[doc = "Field `USICNT3` reader - USI Bit Count 3"]
+pub type USICNT3_R = crate::BitReader<bool>;
+#[doc = "Field `USICNT3` writer - USI Bit Count 3"]
+pub type USICNT3_W<'a, const O: u8> = crate::BitWriter<'a, u8, USICNT_SPEC, bool, O>;
+#[doc = "Field `USICNT4` reader - USI Bit Count 4"]
+pub type USICNT4_R = crate::BitReader<bool>;
+#[doc = "Field `USICNT4` writer - USI Bit Count 4"]
+pub type USICNT4_W<'a, const O: u8> = crate::BitWriter<'a, u8, USICNT_SPEC, bool, O>;
+#[doc = "Field `USIIFGCC` reader - USI Interrupt Flag Clear Control"]
+pub type USIIFGCC_R = crate::BitReader<bool>;
+#[doc = "Field `USIIFGCC` writer - USI Interrupt Flag Clear Control"]
+pub type USIIFGCC_W<'a, const O: u8> = crate::BitWriter<'a, u8, USICNT_SPEC, bool, O>;
+#[doc = "Field `USI16B` reader - USI 16 Bit Shift Register Enable"]
+pub type USI16B_R = crate::BitReader<bool>;
+#[doc = "Field `USI16B` writer - USI 16 Bit Shift Register Enable"]
+pub type USI16B_W<'a, const O: u8> = crate::BitWriter<'a, u8, USICNT_SPEC, bool, O>;
+#[doc = "Field `USISCLREL` reader - USI SCL Released"]
+pub type USISCLREL_R = crate::BitReader<bool>;
+#[doc = "Field `USISCLREL` writer - USI SCL Released"]
+pub type USISCLREL_W<'a, const O: u8> = crate::BitWriter<'a, u8, USICNT_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - USI Bit Count 0"]
     #[inline(always)]
     pub fn usicnt0(&self) -> USICNT0_R {
-        USICNT0_R::new((self.bits & 0x01) != 0)
+        USICNT0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - USI Bit Count 1"]
     #[inline(always)]
     pub fn usicnt1(&self) -> USICNT1_R {
-        USICNT1_R::new(((self.bits >> 1) & 0x01) != 0)
+        USICNT1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - USI Bit Count 2"]
     #[inline(always)]
     pub fn usicnt2(&self) -> USICNT2_R {
-        USICNT2_R::new(((self.bits >> 2) & 0x01) != 0)
+        USICNT2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - USI Bit Count 3"]
     #[inline(always)]
     pub fn usicnt3(&self) -> USICNT3_R {
-        USICNT3_R::new(((self.bits >> 3) & 0x01) != 0)
+        USICNT3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - USI Bit Count 4"]
     #[inline(always)]
     pub fn usicnt4(&self) -> USICNT4_R {
-        USICNT4_R::new(((self.bits >> 4) & 0x01) != 0)
+        USICNT4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - USI Interrupt Flag Clear Control"]
     #[inline(always)]
     pub fn usiifgcc(&self) -> USIIFGCC_R {
-        USIIFGCC_R::new(((self.bits >> 5) & 0x01) != 0)
+        USIIFGCC_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - USI 16 Bit Shift Register Enable"]
     #[inline(always)]
     pub fn usi16b(&self) -> USI16B_R {
-        USI16B_R::new(((self.bits >> 6) & 0x01) != 0)
+        USI16B_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - USI SCL Released"]
     #[inline(always)]
     pub fn usisclrel(&self) -> USISCLREL_R {
-        USISCLREL_R::new(((self.bits >> 7) & 0x01) != 0)
+        USISCLREL_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - USI Bit Count 0"]
     #[inline(always)]
-    pub fn usicnt0(&mut self) -> USICNT0_W {
-        USICNT0_W { w: self }
+    #[must_use]
+    pub fn usicnt0(&mut self) -> USICNT0_W<0> {
+        USICNT0_W::new(self)
     }
     #[doc = "Bit 1 - USI Bit Count 1"]
     #[inline(always)]
-    pub fn usicnt1(&mut self) -> USICNT1_W {
-        USICNT1_W { w: self }
+    #[must_use]
+    pub fn usicnt1(&mut self) -> USICNT1_W<1> {
+        USICNT1_W::new(self)
     }
     #[doc = "Bit 2 - USI Bit Count 2"]
     #[inline(always)]
-    pub fn usicnt2(&mut self) -> USICNT2_W {
-        USICNT2_W { w: self }
+    #[must_use]
+    pub fn usicnt2(&mut self) -> USICNT2_W<2> {
+        USICNT2_W::new(self)
     }
     #[doc = "Bit 3 - USI Bit Count 3"]
     #[inline(always)]
-    pub fn usicnt3(&mut self) -> USICNT3_W {
-        USICNT3_W { w: self }
+    #[must_use]
+    pub fn usicnt3(&mut self) -> USICNT3_W<3> {
+        USICNT3_W::new(self)
     }
     #[doc = "Bit 4 - USI Bit Count 4"]
     #[inline(always)]
-    pub fn usicnt4(&mut self) -> USICNT4_W {
-        USICNT4_W { w: self }
+    #[must_use]
+    pub fn usicnt4(&mut self) -> USICNT4_W<4> {
+        USICNT4_W::new(self)
     }
     #[doc = "Bit 5 - USI Interrupt Flag Clear Control"]
     #[inline(always)]
-    pub fn usiifgcc(&mut self) -> USIIFGCC_W {
-        USIIFGCC_W { w: self }
+    #[must_use]
+    pub fn usiifgcc(&mut self) -> USIIFGCC_W<5> {
+        USIIFGCC_W::new(self)
     }
     #[doc = "Bit 6 - USI 16 Bit Shift Register Enable"]
     #[inline(always)]
-    pub fn usi16b(&mut self) -> USI16B_W {
-        USI16B_W { w: self }
+    #[must_use]
+    pub fn usi16b(&mut self) -> USI16B_W<6> {
+        USI16B_W::new(self)
     }
     #[doc = "Bit 7 - USI SCL Released"]
     #[inline(always)]
-    pub fn usisclrel(&mut self) -> USISCLREL_W {
-        USISCLREL_W { w: self }
+    #[must_use]
+    pub fn usisclrel(&mut self) -> USISCLREL_W<7> {
+        USISCLREL_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub fn bits(&mut self, bits: u8) -> &mut Self {
+        unsafe { self.0.bits(bits) };
+        self
+    }
+}
+#[doc = "USI Bit Counter Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usicnt](index.html) module"]
+pub struct USICNT_SPEC;
+impl crate::RegisterSpec for USICNT_SPEC {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [usicnt::R](R) reader structure"]
+impl crate::Readable for USICNT_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [usicnt::W](W) writer structure"]
+impl crate::Writable for USICNT_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets USICNT to value 0"]
+impl crate::Resettable for USICNT_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }
