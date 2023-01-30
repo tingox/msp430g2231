@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<device>
+<device xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+  <vendor>msp430gen</vendor>
   <name>MSP430G2231</name>
-  <size>2</size>
-  <resetValue>0</resetValue>
+  <version>v0.4.0</version>
+  <description/>
+  <addressUnitBits>8</addressUnitBits>
+  <width>16</width>
+  <size>16</size>
   <access>read-write</access>
+  <resetValue>0</resetValue>
   <peripherals>
     <peripheral>
       <name>SPECIAL_FUNCTION</name>
@@ -104,6 +109,12 @@
           <addressOffset>0</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -162,12 +173,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1OUT</name>
@@ -175,6 +180,12 @@
           <addressOffset>1</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -233,12 +244,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1DIR</name>
@@ -246,6 +251,12 @@
           <addressOffset>2</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -304,12 +315,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1IFG</name>
@@ -317,6 +322,12 @@
           <addressOffset>3</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -375,12 +386,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1IES</name>
@@ -388,6 +393,12 @@
           <addressOffset>4</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -446,12 +457,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1IE</name>
@@ -459,6 +464,12 @@
           <addressOffset>5</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -517,12 +528,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1SEL</name>
@@ -530,6 +535,12 @@
           <addressOffset>6</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -588,12 +599,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1REN</name>
@@ -601,6 +606,12 @@
           <addressOffset>7</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -659,12 +670,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2IN</name>
@@ -672,6 +677,12 @@
           <addressOffset>8</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -730,12 +741,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2OUT</name>
@@ -743,6 +748,12 @@
           <addressOffset>9</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -801,12 +812,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2DIR</name>
@@ -814,6 +819,12 @@
           <addressOffset>10</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -872,12 +883,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2IFG</name>
@@ -885,6 +890,12 @@
           <addressOffset>11</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -943,12 +954,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2IES</name>
@@ -956,6 +961,12 @@
           <addressOffset>12</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -1014,12 +1025,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2IE</name>
@@ -1027,6 +1032,12 @@
           <addressOffset>13</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -1085,12 +1096,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2SEL</name>
@@ -1098,6 +1103,12 @@
           <addressOffset>14</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -1156,12 +1167,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2REN</name>
@@ -1169,6 +1174,12 @@
           <addressOffset>15</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -1227,12 +1238,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
       </registers>
     </peripheral>
@@ -1848,6 +1853,12 @@
           <addressOffset>4</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>MOD0</name>
@@ -1906,12 +1917,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>BCSCTL1</name>
@@ -2109,6 +2114,12 @@
           <addressOffset>0</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>USISWRST</name>
@@ -2167,12 +2178,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>USICTL1</name>
@@ -2180,6 +2185,12 @@
           <addressOffset>1</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>USIIFG</name>
@@ -2238,12 +2249,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>USICKCTL</name>
@@ -2372,6 +2377,12 @@
           <addressOffset>3</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>USICNT0</name>
@@ -2430,12 +2441,6 @@
               <access>read-write</access>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>USISRL</name>
@@ -3276,10 +3281,4 @@
       </interrupt>
     </peripheral>
   </peripherals>
-  <vendorExtensions>
-    <msp430_svd>
-      <version>0.2.0</version>
-      <commit_hash>eb546a0</commit_hash>
-    </msp430_svd>
-  </vendorExtensions>
 </device>
