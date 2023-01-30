@@ -1,161 +1,67 @@
-#[doc = "Reader of register FCTL2"]
-pub type R = crate::R<u16, super::FCTL2>;
-#[doc = "Writer for register FCTL2"]
-pub type W = crate::W<u16, super::FCTL2>;
-#[doc = "Register FCTL2 `reset()`'s with value 0"]
-impl crate::ResetValue for super::FCTL2 {
-    type Type = u16;
+#[doc = "Register `FCTL2` reader"]
+pub struct R(crate::R<FCTL2_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<FCTL2_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `FN0`"]
-pub type FN0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FN0`"]
-pub struct FN0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FN0_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<FCTL2_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
-        self.w
+    fn from(reader: crate::R<FCTL2_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `FN1`"]
-pub type FN1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FN1`"]
-pub struct FN1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FN1_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `FCTL2` writer"]
+pub struct W(crate::W<FCTL2_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<FCTL2_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `FN2`"]
-pub type FN2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FN2`"]
-pub struct FN2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FN2_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u16) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `FN3`"]
-pub type FN3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FN3`"]
-pub struct FN3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FN3_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<FCTL2_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u16) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<FCTL2_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `FN4`"]
-pub type FN4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FN4`"]
-pub struct FN4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FN4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u16) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Reader of field `FN5`"]
-pub type FN5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FN5`"]
-pub struct FN5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FN5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u16) & 0x01) << 5);
-        self.w
-    }
-}
+#[doc = "Field `FN0` reader - Divide Flash clock by 1 to 64 using FN0 to FN5 according to:"]
+pub type FN0_R = crate::BitReader<bool>;
+#[doc = "Field `FN0` writer - Divide Flash clock by 1 to 64 using FN0 to FN5 according to:"]
+pub type FN0_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL2_SPEC, bool, O>;
+#[doc = "Field `FN1` reader - 32*FN5 + 16*FN4 + 8*FN3 + 4*FN2 + 2*FN1 + FN0 + 1"]
+pub type FN1_R = crate::BitReader<bool>;
+#[doc = "Field `FN1` writer - 32*FN5 + 16*FN4 + 8*FN3 + 4*FN2 + 2*FN1 + FN0 + 1"]
+pub type FN1_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL2_SPEC, bool, O>;
+#[doc = "Field `FN2` reader - FN2"]
+pub type FN2_R = crate::BitReader<bool>;
+#[doc = "Field `FN2` writer - FN2"]
+pub type FN2_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL2_SPEC, bool, O>;
+#[doc = "Field `FN3` reader - FN3"]
+pub type FN3_R = crate::BitReader<bool>;
+#[doc = "Field `FN3` writer - FN3"]
+pub type FN3_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL2_SPEC, bool, O>;
+#[doc = "Field `FN4` reader - FN4"]
+pub type FN4_R = crate::BitReader<bool>;
+#[doc = "Field `FN4` writer - FN4"]
+pub type FN4_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL2_SPEC, bool, O>;
+#[doc = "Field `FN5` reader - FN5"]
+pub type FN5_R = crate::BitReader<bool>;
+#[doc = "Field `FN5` writer - FN5"]
+pub type FN5_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL2_SPEC, bool, O>;
+#[doc = "Field `FSSEL` reader - Flash clock select 0 */ /* to distinguish from USART SSELx"]
+pub type FSSEL_R = crate::FieldReader<u8, FSSEL_A>;
 #[doc = "Flash clock select 0 */ /* to distinguish from USART SSELx\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum FSSEL_A {
     #[doc = "0: Flash clock select: 0 - ACLK"]
@@ -173,10 +79,8 @@ impl From<FSSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `FSSEL`"]
-pub type FSSEL_R = crate::R<u8, FSSEL_A>;
 impl FSSEL_R {
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> FSSEL_A {
         match self.bits {
@@ -208,18 +112,9 @@ impl FSSEL_R {
         *self == FSSEL_A::FSSEL_3
     }
 }
-#[doc = "Write proxy for field `FSSEL`"]
-pub struct FSSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FSSEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: FSSEL_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
-    }
+#[doc = "Field `FSSEL` writer - Flash clock select 0 */ /* to distinguish from USART SSELx"]
+pub type FSSEL_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u16, FCTL2_SPEC, u8, FSSEL_A, 2, O>;
+impl<'a, const O: u8> FSSEL_W<'a, O> {
     #[doc = "Flash clock select: 0 - ACLK"]
     #[inline(always)]
     pub fn fssel_0(self) -> &'a mut W {
@@ -240,84 +135,110 @@ impl<'a> FSSEL_W<'a> {
     pub fn fssel_3(self) -> &'a mut W {
         self.variant(FSSEL_A::FSSEL_3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | (((value as u16) & 0x03) << 6);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bit 0 - Divide Flash clock by 1 to 64 using FN0 to FN5 according to:"]
     #[inline(always)]
     pub fn fn0(&self) -> FN0_R {
-        FN0_R::new((self.bits & 0x01) != 0)
+        FN0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 32*FN5 + 16*FN4 + 8*FN3 + 4*FN2 + 2*FN1 + FN0 + 1"]
     #[inline(always)]
     pub fn fn1(&self) -> FN1_R {
-        FN1_R::new(((self.bits >> 1) & 0x01) != 0)
+        FN1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - FN2"]
     #[inline(always)]
     pub fn fn2(&self) -> FN2_R {
-        FN2_R::new(((self.bits >> 2) & 0x01) != 0)
+        FN2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - FN3"]
     #[inline(always)]
     pub fn fn3(&self) -> FN3_R {
-        FN3_R::new(((self.bits >> 3) & 0x01) != 0)
+        FN3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - FN4"]
     #[inline(always)]
     pub fn fn4(&self) -> FN4_R {
-        FN4_R::new(((self.bits >> 4) & 0x01) != 0)
+        FN4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - FN5"]
     #[inline(always)]
     pub fn fn5(&self) -> FN5_R {
-        FN5_R::new(((self.bits >> 5) & 0x01) != 0)
+        FN5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:7 - Flash clock select 0 */ /* to distinguish from USART SSELx"]
     #[inline(always)]
     pub fn fssel(&self) -> FSSEL_R {
-        FSSEL_R::new(((self.bits >> 6) & 0x03) as u8)
+        FSSEL_R::new(((self.bits >> 6) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0 - Divide Flash clock by 1 to 64 using FN0 to FN5 according to:"]
     #[inline(always)]
-    pub fn fn0(&mut self) -> FN0_W {
-        FN0_W { w: self }
+    #[must_use]
+    pub fn fn0(&mut self) -> FN0_W<0> {
+        FN0_W::new(self)
     }
     #[doc = "Bit 1 - 32*FN5 + 16*FN4 + 8*FN3 + 4*FN2 + 2*FN1 + FN0 + 1"]
     #[inline(always)]
-    pub fn fn1(&mut self) -> FN1_W {
-        FN1_W { w: self }
+    #[must_use]
+    pub fn fn1(&mut self) -> FN1_W<1> {
+        FN1_W::new(self)
     }
     #[doc = "Bit 2 - FN2"]
     #[inline(always)]
-    pub fn fn2(&mut self) -> FN2_W {
-        FN2_W { w: self }
+    #[must_use]
+    pub fn fn2(&mut self) -> FN2_W<2> {
+        FN2_W::new(self)
     }
     #[doc = "Bit 3 - FN3"]
     #[inline(always)]
-    pub fn fn3(&mut self) -> FN3_W {
-        FN3_W { w: self }
+    #[must_use]
+    pub fn fn3(&mut self) -> FN3_W<3> {
+        FN3_W::new(self)
     }
     #[doc = "Bit 4 - FN4"]
     #[inline(always)]
-    pub fn fn4(&mut self) -> FN4_W {
-        FN4_W { w: self }
+    #[must_use]
+    pub fn fn4(&mut self) -> FN4_W<4> {
+        FN4_W::new(self)
     }
     #[doc = "Bit 5 - FN5"]
     #[inline(always)]
-    pub fn fn5(&mut self) -> FN5_W {
-        FN5_W { w: self }
+    #[must_use]
+    pub fn fn5(&mut self) -> FN5_W<5> {
+        FN5_W::new(self)
     }
     #[doc = "Bits 6:7 - Flash clock select 0 */ /* to distinguish from USART SSELx"]
     #[inline(always)]
-    pub fn fssel(&mut self) -> FSSEL_W {
-        FSSEL_W { w: self }
+    #[must_use]
+    pub fn fssel(&mut self) -> FSSEL_W<6> {
+        FSSEL_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "FLASH Control 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fctl2](index.html) module"]
+pub struct FCTL2_SPEC;
+impl crate::RegisterSpec for FCTL2_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [fctl2::R](R) reader structure"]
+impl crate::Readable for FCTL2_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [fctl2::W](W) writer structure"]
+impl crate::Writable for FCTL2_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets FCTL2 to value 0"]
+impl crate::Resettable for FCTL2_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }
