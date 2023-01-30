@@ -1,89 +1,55 @@
-#[doc = "Reader of register TACTL"]
-pub type R = crate::R<u16, super::TACTL>;
-#[doc = "Writer for register TACTL"]
-pub type W = crate::W<u16, super::TACTL>;
-#[doc = "Register TACTL `reset()`'s with value 0"]
-impl crate::ResetValue for super::TACTL {
-    type Type = u16;
+#[doc = "Register `TACTL` reader"]
+pub struct R(crate::R<TACTL_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<TACTL_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TAIFG`"]
-pub type TAIFG_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TAIFG`"]
-pub struct TAIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TAIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<TACTL_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
-        self.w
+    fn from(reader: crate::R<TACTL_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `TAIE`"]
-pub type TAIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TAIE`"]
-pub struct TAIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TAIE_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `TACTL` writer"]
+pub struct W(crate::W<TACTL_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<TACTL_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TACLR`"]
-pub type TACLR_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TACLR`"]
-pub struct TACLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TACLR_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u16) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
+impl From<crate::W<TACTL_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<TACTL_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `TAIFG` reader - Timer A counter interrupt flag"]
+pub type TAIFG_R = crate::BitReader<bool>;
+#[doc = "Field `TAIFG` writer - Timer A counter interrupt flag"]
+pub type TAIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, TACTL_SPEC, bool, O>;
+#[doc = "Field `TAIE` reader - Timer A counter interrupt enable"]
+pub type TAIE_R = crate::BitReader<bool>;
+#[doc = "Field `TAIE` writer - Timer A counter interrupt enable"]
+pub type TAIE_W<'a, const O: u8> = crate::BitWriter<'a, u16, TACTL_SPEC, bool, O>;
+#[doc = "Field `TACLR` reader - Timer A counter clear"]
+pub type TACLR_R = crate::BitReader<bool>;
+#[doc = "Field `TACLR` writer - Timer A counter clear"]
+pub type TACLR_W<'a, const O: u8> = crate::BitWriter<'a, u16, TACTL_SPEC, bool, O>;
+#[doc = "Field `MC` reader - Timer A mode control 1"]
+pub type MC_R = crate::FieldReader<u8, MC_A>;
 #[doc = "Timer A mode control 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MC_A {
     #[doc = "0: Timer A mode control: 0 - Stop"]
@@ -101,10 +67,8 @@ impl From<MC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `MC`"]
-pub type MC_R = crate::R<u8, MC_A>;
 impl MC_R {
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> MC_A {
         match self.bits {
@@ -136,18 +100,9 @@ impl MC_R {
         *self == MC_A::MC_3
     }
 }
-#[doc = "Write proxy for field `MC`"]
-pub struct MC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MC_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: MC_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
-    }
+#[doc = "Field `MC` writer - Timer A mode control 1"]
+pub type MC_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u16, TACTL_SPEC, u8, MC_A, 2, O>;
+impl<'a, const O: u8> MC_W<'a, O> {
     #[doc = "Timer A mode control: 0 - Stop"]
     #[inline(always)]
     pub fn mc_0(self) -> &'a mut W {
@@ -168,15 +123,11 @@ impl<'a> MC_W<'a> {
     pub fn mc_3(self) -> &'a mut W {
         self.variant(MC_A::MC_3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | (((value as u16) & 0x03) << 4);
-        self.w
-    }
 }
+#[doc = "Field `ID` reader - Timer A clock input divider 1"]
+pub type ID_R = crate::FieldReader<u8, ID_A>;
 #[doc = "Timer A clock input divider 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum ID_A {
     #[doc = "0: Timer A input divider: 0 - /1"]
@@ -194,10 +145,8 @@ impl From<ID_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `ID`"]
-pub type ID_R = crate::R<u8, ID_A>;
 impl ID_R {
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> ID_A {
         match self.bits {
@@ -229,18 +178,9 @@ impl ID_R {
         *self == ID_A::ID_3
     }
 }
-#[doc = "Write proxy for field `ID`"]
-pub struct ID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ID_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: ID_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
-    }
+#[doc = "Field `ID` writer - Timer A clock input divider 1"]
+pub type ID_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u16, TACTL_SPEC, u8, ID_A, 2, O>;
+impl<'a, const O: u8> ID_W<'a, O> {
     #[doc = "Timer A input divider: 0 - /1"]
     #[inline(always)]
     pub fn id_0(self) -> &'a mut W {
@@ -261,15 +201,11 @@ impl<'a> ID_W<'a> {
     pub fn id_3(self) -> &'a mut W {
         self.variant(ID_A::ID_3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | (((value as u16) & 0x03) << 6);
-        self.w
-    }
 }
+#[doc = "Field `TASSEL` reader - Timer A clock source select 1"]
+pub type TASSEL_R = crate::FieldReader<u8, TASSEL_A>;
 #[doc = "Timer A clock source select 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TASSEL_A {
     #[doc = "0: Timer A clock source select: 0 - TACLK"]
@@ -287,10 +223,8 @@ impl From<TASSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `TASSEL`"]
-pub type TASSEL_R = crate::R<u8, TASSEL_A>;
 impl TASSEL_R {
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TASSEL_A {
         match self.bits {
@@ -322,18 +256,10 @@ impl TASSEL_R {
         *self == TASSEL_A::TASSEL_3
     }
 }
-#[doc = "Write proxy for field `TASSEL`"]
-pub struct TASSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TASSEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TASSEL_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
-    }
+#[doc = "Field `TASSEL` writer - Timer A clock source select 1"]
+pub type TASSEL_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u16, TACTL_SPEC, u8, TASSEL_A, 2, O>;
+impl<'a, const O: u8> TASSEL_W<'a, O> {
     #[doc = "Timer A clock source select: 0 - TACLK"]
     #[inline(always)]
     pub fn tassel_0(self) -> &'a mut W {
@@ -354,74 +280,99 @@ impl<'a> TASSEL_W<'a> {
     pub fn tassel_3(self) -> &'a mut W {
         self.variant(TASSEL_A::TASSEL_3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u16) & 0x03) << 8);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bit 0 - Timer A counter interrupt flag"]
     #[inline(always)]
     pub fn taifg(&self) -> TAIFG_R {
-        TAIFG_R::new((self.bits & 0x01) != 0)
+        TAIFG_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Timer A counter interrupt enable"]
     #[inline(always)]
     pub fn taie(&self) -> TAIE_R {
-        TAIE_R::new(((self.bits >> 1) & 0x01) != 0)
+        TAIE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Timer A counter clear"]
     #[inline(always)]
     pub fn taclr(&self) -> TACLR_R {
-        TACLR_R::new(((self.bits >> 2) & 0x01) != 0)
+        TACLR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 4:5 - Timer A mode control 1"]
     #[inline(always)]
     pub fn mc(&self) -> MC_R {
-        MC_R::new(((self.bits >> 4) & 0x03) as u8)
+        MC_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - Timer A clock input divider 1"]
     #[inline(always)]
     pub fn id(&self) -> ID_R {
-        ID_R::new(((self.bits >> 6) & 0x03) as u8)
+        ID_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - Timer A clock source select 1"]
     #[inline(always)]
     pub fn tassel(&self) -> TASSEL_R {
-        TASSEL_R::new(((self.bits >> 8) & 0x03) as u8)
+        TASSEL_R::new(((self.bits >> 8) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0 - Timer A counter interrupt flag"]
     #[inline(always)]
-    pub fn taifg(&mut self) -> TAIFG_W {
-        TAIFG_W { w: self }
+    #[must_use]
+    pub fn taifg(&mut self) -> TAIFG_W<0> {
+        TAIFG_W::new(self)
     }
     #[doc = "Bit 1 - Timer A counter interrupt enable"]
     #[inline(always)]
-    pub fn taie(&mut self) -> TAIE_W {
-        TAIE_W { w: self }
+    #[must_use]
+    pub fn taie(&mut self) -> TAIE_W<1> {
+        TAIE_W::new(self)
     }
     #[doc = "Bit 2 - Timer A counter clear"]
     #[inline(always)]
-    pub fn taclr(&mut self) -> TACLR_W {
-        TACLR_W { w: self }
+    #[must_use]
+    pub fn taclr(&mut self) -> TACLR_W<2> {
+        TACLR_W::new(self)
     }
     #[doc = "Bits 4:5 - Timer A mode control 1"]
     #[inline(always)]
-    pub fn mc(&mut self) -> MC_W {
-        MC_W { w: self }
+    #[must_use]
+    pub fn mc(&mut self) -> MC_W<4> {
+        MC_W::new(self)
     }
     #[doc = "Bits 6:7 - Timer A clock input divider 1"]
     #[inline(always)]
-    pub fn id(&mut self) -> ID_W {
-        ID_W { w: self }
+    #[must_use]
+    pub fn id(&mut self) -> ID_W<6> {
+        ID_W::new(self)
     }
     #[doc = "Bits 8:9 - Timer A clock source select 1"]
     #[inline(always)]
-    pub fn tassel(&mut self) -> TASSEL_W {
-        TASSEL_W { w: self }
+    #[must_use]
+    pub fn tassel(&mut self) -> TASSEL_W<8> {
+        TASSEL_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Timer A Control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tactl](index.html) module"]
+pub struct TACTL_SPEC;
+impl crate::RegisterSpec for TACTL_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [tactl::R](R) reader structure"]
+impl crate::Readable for TACTL_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [tactl::W](W) writer structure"]
+impl crate::Writable for TACTL_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets TACTL to value 0"]
+impl crate::Resettable for TACTL_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }
