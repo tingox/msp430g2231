@@ -15,6 +15,10 @@ version = "0.2.0"
 msp430 = "0.4.0"
 vcell = "0.1.0"
 
+[dependencies.critical-section]
+optional = true
+version = "1.0.0"
+
 [dependencies.msp430-rt]
 optional = true
 version = "0.4.0"
