@@ -11,7 +11,7 @@ repository = "https://github.com/tkuenzel/msp430g2231"
 version = "0.2.0"
 
 [dependencies]
-bare-metal = "0.2.0"
+# bare-metal = "0.2.0"
 msp430 = "0.4.0"
 vcell = "0.1.0"
 
