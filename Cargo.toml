@@ -9,6 +9,7 @@ license = "MIT OR Apache-2.0"
 name = "msp430g2231"
 repository = "https://github.com/tkuenzel/msp430g2231"
 version = "0.2.0"
+edition = "2021"
 
 [dependencies]
 # bare-metal = "0.2.0"
